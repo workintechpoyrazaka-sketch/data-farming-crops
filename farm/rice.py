@@ -1,12 +1,15 @@
-class Rice():
-    def __init__(self):
-        self.grains = 0
+"""Module defining the Rice crop."""
+
+from farm.crop import Crop
+
+
+class Rice(Crop):
+    """A rice crop that gains 5 grains per watering and 10 per transplant."""
 
     def water(self):
+        """Add 5 grains to the rice crop."""
         self.grains += 5
 
-    def ripe(self):
-        return self.grains >= 15
-
     def transplant(self):
+        """Add 10 grains to the rice crop."""
         self.grains += 10
